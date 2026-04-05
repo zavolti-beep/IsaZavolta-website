@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Materialize Flexbox Demo</title>
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <style>
+    .flex-container {
+      display: flex;
+      justify-content: space-between; /* horizontal spacing */
+      align-items: center;            /* vertical alignment */
+      height: 200px;
+      border: 2px solid #ccc;
+      margin-top: 20px;
+    }
+
+    .flex-item {
+      background: #26a69a;
+      color: white;
+      padding: 20px;
+      width: 100px;
+      text-align: center;
+    }
+
+    .column-flex {
+      display: flex;
+      flex-direction: column; /* stack vertically */
+      gap: 10px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body class="container">
+
+  <h4 class="center-align">Materialize Flexbox Example</h4>
+
+  <!-- Row Flexbox -->
+  <div class="flex-container z-depth-2">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+
+  <!-- Column Flexbox -->
+  <div class="column-flex">
+    <div class="card-panel teal lighten-2 white-text">Column Item A</div>
+    <div class="card-panel teal lighten-2 white-text">Column Item B</div>
+    <div class="card-panel teal lighten-2 white-text">Column Item C</div>
+  </div>
+
+  <!-- Responsive Flex Example -->
+  <div class="row" style="margin-top:40px;">
+    <div class="col s12 m6 l4">
+      <div class="card-panel blue lighten-2 white-text">Responsive Box 1</div>
+    </div>
+    <div class="col s12 m6 l4">
+      <div class="card-panel blue lighten-2 white-text">Responsive Box 2</div>
+    </div>
+    <div class="col s12 m6 l4">
+      <div class="card-panel blue lighten-2 white-text">Responsive Box 3</div>
+    </div>
+  </div>
+
+</body>
+</html>
