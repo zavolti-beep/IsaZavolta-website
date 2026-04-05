@@ -55,3 +55,17 @@ footer{
     margin-top: 30x;
     font-size: 14px;
 }
+.hero {
+  background:#eeaf61;
+  color: white;
+  padding: 60px 0;
+}
+
+.rounded-img {
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.video-section {
+  margin-top: 40px;
+}
