@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore the World</title>
+  
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background: linear-gradient(to right, #56ccf2, #2f80ed);
+      color: white;
+    }
+
+    nav {
+      background-color: white(0,0,0,0.7);
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .carousel .carousel-item img {
+      border-radius: 15px;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .section {
+      padding: 40px 20px;
+    }
+
+    .video-container {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-wrapper container">
+      <nav>
+    <ul>
+       <li><a href="index.html">Home</a></li> 
+       <li><a href="content2.html">Budget</a></li>
+       <li><a href="content.html">Locations</a></li>
+        <li><a href="materialize.html">Materialize</a></li>
+        <li><a href="Quicktips.html">Quick Tips</a></li>
+    </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h2>Explore the World</h2>
+    <p>Discover amazing places, tips, and adventures</p>
+  </header>
+
+  <!-- Carousel Section -->
+  <div class="section container">
+    <h4>Top Destinations</h4>
+
+    <div class="carousel">
+      <a class="carousel-item" href="#one!">
+        <img src="https://www.rd.com/wp-content/uploads/2022/04/GettyImages-1140602972-e1748616001999.jpg?fit=750%2C750" width="300">
+      </a>
+      <a class="carousel-item" href="#two!">
+        <img src="https://www.rd.com/wp-content/uploads/2022/04/GettyImages-1140602972-e1748616001999.jpg?fit=750%2C750" width="300">
+      </a>
+      <a class="carousel-item" href="#three!">
+        <img src="https://www.rd.com/wp-content/uploads/2022/04/GettyImages-1140602972-e1748616001999.jpg?fit=750%2C750" width="300">
+      </a>
+      <a class="carousel-item" href="#four!">
+        <img src="https://www.rd.com/wp-content/uploads/2022/04/GettyImages-1140602972-e1748616001999.jpg?fit=750%2C750" width="300">
+      </a>
+      <a class="carousel-item" href="#five!">
+        <img src="https://www.rd.com/wp-content/uploads/2022/04/GettyImages-1140602972-e1748616001999.jpg?fit=750%2C750" width="300">
+      </a>
+    </div>
+  </div>
+
+  <!-- Collapsible Section -->
+  <div class="section container">
+    <h4>Travel Tips</h4>
+
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header">✈️ Packing Tips</div>
+        <div class="collapsible-body">
+          <span>Pack light, roll your clothes, and bring essentials only.</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="collapsible-header">💰 Save Money</div>
+        <div class="collapsible-body">
+          <span>Book flights early and use travel apps for deals.</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="collapsible-header">🌍 Stay Safe</div>
+        <div class="collapsible-body">
+          <span>Always keep copies of documents and stay aware of surroundings.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Video Section -->
+  <div class="section container">
+    <h4>Travel Inspiration 🎥</h4>
+
+    <div class="video-container">
+      <iframe width="853" height="480" 
+        src="https://www.youtube.com/embed/lM02vNMRRB0" 
+        frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer black">
+    <div class="container center">
+      <p>© 2026 TravelNow | Explore More 🌎</p>
+    </div>
+  </footer>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Initialization Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // Initialize Carousel
+      var carousels = document.querySelectorAll('.carousel');
+      M.Carousel.init(carousels, {
+        fullWidth: false,
+        indicators: true
+      });
+
+      // Initialize Collapsible
+      var collapsibles = document.querySelectorAll('.collapsible');
+      M.Collapsible.init(collapsibles);
+
+    });
+  </script>
+
+</body>
+</html>
