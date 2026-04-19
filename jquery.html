@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<body>
+    <header>
+        <h1>Enjoy Traveling the World!</h1>
+    </header>
+
+<nav>
+    <ul>
+       <li><a href="index.html">Home</a></li> 
+       <li><a href="content2.html">Budget</a></li>
+       <li><a href="content.html">Locations</a></li>
+        <li><a href="materialize.html">Materialize</a></li>
+        <li><a href="materialize1.html">Quick Tips</a></li>
+        <li><a href="jquery.html">JQuery</a></li>
+    </ul>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #box {
+            width: 200px;
+            height: 100px;
+            background: steelblue;
+            margin-top: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>jQuery Features Demo</h1>
+
+    <!-- Append List Items -->
+    <h2>Append List Items (With Counter)</h2>
+    <button id="addItem">Add Item</button>
+    <ul id="list"></ul>
+
+    <!-- Dark Mode Toggle -->
+    <h2>Dark Mode Toggle</h2>
+    <button id="toggleDark">Toggle Dark Mode</button>
+
+    <!-- Slide Animation -->
+    <h2>Slide Animation</h2>
+    <button id="slideBtn">Slide Toggle Box</button>
+    <div id="box"></div>
+
+    <script>
+        $(document).ready(function () {
+
+            // Counter for list items
+            let count = 0;
+
+            // Append List Items
+            $("#addItem").click(function () {
+                count++;
+                $("#list").append("<li>Item " + count + "</li>");
+            });
+
+            // Dark Mode Toggle
+            $("#toggleDark").click(function () {
+                $("body").toggleClass("dark-mode");
+            });
+
+            // Slide Animation
+            $("#slideBtn").click(function () {
+                $("#box").slideToggle();
+            });
+
+        });
+    </script>
+
+</body>
+</html>
