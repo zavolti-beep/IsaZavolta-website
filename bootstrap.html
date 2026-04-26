@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<Head>
+     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Interactions</title>
+<link rel="stylesheet" href="styles.css">
+</Head>
+
+<body>
+
+    <header>
+        <h1>BootStrap</h1>
+    </header>
+<nav>
+    <ul>
+      <li><a href="index.html">Home</a></li> 
+       <li><a href="content2.html">Budget</a></li>
+       <li><a href="content.html">Locations</a></li>
+        <li><a href="materialize.html">Materialize</a></li>
+        <li><a href="materialize1.html">Quick Tips</a></li>
+        <li><a href="jquery.html">JQuery</a></li>
+        <li><a href="bootstrap.html">BootStrap</a></li>
+    </ul>
+    <style>
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+    .dark-mode .card {
+      background-color: #1e1e1e;
+    }
+  </style>
+</head>
+<body class="p-4">
+
+<div class="container">
+  <h1 class="mb-4">Interactive Bootstrap Page</h1>
+
+  <!-- Dark Mode Toggle -->
+  <button id="toggleMode" class="btn btn-secondary mb-4">Toggle Dark Mode</button>
+
+  <!-- Form -->
+  <div class="card p-3 mb-4">
+    <h4>Contact Form</h4>
+    <form id="myForm">
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea id="messageBox" class="form-control" rows="3" maxlength="100"></textarea>
+        <small id="charCount">0 / 100 characters</small>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- Dynamic List -->
+  <div class="card p-3">
+    <h4>Travel List</h4>
+    <div class="input-group mb-3">
+      <input type="text" id="itemInput" class="form-control" placeholder="Add a place">
+      <button class="btn btn-success" id="addItem">Add</button>
+    </div>
+
+    <ul id="itemList" class="list-group"></ul>
+  </div>
+</div>
+
+<script>
+  // Dark Mode Toggle
+  document.getElementById("toggleMode").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+  });
+
+  // Character Counter
+  const messageBox = document.getElementById("messageBox");
+  const charCount = document.getElementById("charCount");
+
+  messageBox.addEventListener("input", function() {
+    charCount.textContent = messageBox.value.length + " / 100 characters";
+  });
+
+  // Dynamic List Add/Remove
+  const addItemBtn = document.getElementById("addItem");
+  const itemInput = document.getElementById("itemInput");
+  const itemList = document.getElementById("itemList");
+
+  addItemBtn.addEventListener("click", function() {
+    if (itemInput.value.trim() !== "") {
+      const li = document.createElement("li");
+      li.className = "list-group-item d-flex justify-content-between align-items-center";
+      li.textContent = itemInput.value;
+
+      const removeBtn = document.createElement("button");
+      removeBtn.className = "btn btn-danger btn-sm";
+      removeBtn.textContent = "Remove";
+
+      removeBtn.onclick = function() {
+        li.remove();
+      };
+
+      li.appendChild(removeBtn);
+      itemList.appendChild(li);
+
+      itemInput.value = "";
+    }
+  });
+</script>
+
+</body>
+</html>
